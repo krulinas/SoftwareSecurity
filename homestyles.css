@@ -1,0 +1,325 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #fff7e8;
+    color: #d42b1e;
+}
+
+/* Header */
+header {
+    background-color: #3b7a57;
+    color: #ffffff !important;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-bottom: 3px solid #3b7a57;
+    letter-spacing: 2px;
+}
+
+/* Drawer Styles */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #fff7e8;
+    color: #3b7a57;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding-top: 1rem;
+    border-right: 3px solid #d42b1e;
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+.drawer-spacer {
+    height: 50px;
+}
+
+.drawer nav a {
+    display: block;
+    color: #3b7a57;
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+
+.drawer nav a:hover {
+    background-color: #f5f5f5;
+    color: #d42b1e;
+}
+
+/* Drawer Toggle Button */
+.drawer-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: #d42b1e;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-toggle:hover {
+    background-color: #3b7a57;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.drawer-open {
+    margin-left: 250px;
+}
+
+/* Sections */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.section {
+    background: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 2px dashed #3b7a57;
+}
+
+.hero h2 {
+    font-size: 3rem; /* Increased size */
+    color: #d42b1e; /* Ensuring the style matches the theme */
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero p {
+    font-size: 1.5rem; /* Adjust to your preference */
+    color: #d42b1e; /* Optional: Keep consistent with your theme */
+    line-height: 1.8; /* For better readability */
+}
+
+.section h2 {
+    color: #d42b1e;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Product List */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.hotselling h1{
+    font-size: 2rem; /* Increased size */
+    color: #3b7a57; /* Ensuring the style matches the theme */
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Carousel Styles */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 2rem auto;
+    max-width: 80%;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-slide {
+    flex: 0 0 25%; /* Adjust width based on the number of visible items */
+    text-align: center;
+    padding: 1rem;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #3b7a57;
+}
+
+.carousel-button {
+    background-color: #3b7a57;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-button:hover {
+    background-color: #d42b1e;
+}
+
+.carousel-button.prev {
+    left: 0.5rem;
+}
+
+.carousel-button.next {
+    right: 0.5rem;
+}
+
+/* Nearest Shop Section */
+.shop-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1400px;
+}
+
+.shop-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.shop-image img {
+    width: 450px; /* Adjust to the suggested size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shop-details {
+    max-width: 600px;
+    text-align: left;
+}
+
+.shop-details h2 {
+    font-size: 2rem;
+    color: #3b8f45; /* Krispy Kreme green */
+    margin-bottom: 10px;
+}
+
+.shop-details p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+.shop-details p strong {
+    font-size: 1.2rem;
+    color: #c81e3c; /* Krispy Kreme red */
+}
+
+.shop-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.shop-buttons a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.order-now-button {
+    background-color: #c81e3c; /* Krispy Kreme red */
+}
+
+.order-now-button:hover {
+    background-color: #a81630;
+}
+
+.shops-button, .show-hours-button {
+    background-color: #3b8f45; /* Krispy Kreme green */
+}
+
+.shops-button:hover, .show-hours-button:hover {
+    background-color: #2a6f36;
+}
+
+/* Footer Section */
+footer {
+    background: #3b7a57; /* Krispy Kreme green */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 3px solid #ffffff; /* White border for consistency */
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Footer Links */
+footer a {
+    color: #ffed4c; /* Krispy Kreme red for links */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff; /* White on hover */
+    text-shadow: 0px 0px 5px #ff3829; /* Subtle glow effect */
+}
+
+/* Footer Text */
+footer p {
+    margin: 0.5rem 0;
+    font-family: 'Roboto', sans-serif;
+}
